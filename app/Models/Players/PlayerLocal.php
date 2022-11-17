@@ -18,11 +18,6 @@ class PlayerLocal extends Model
 
     protected $table = 'player_local';
 
-    protected $fillable = [
-        'event_id',
-        'player_id'
-    ];
-
     public function event()
     {
         return $this->belongsTo(Event::class);

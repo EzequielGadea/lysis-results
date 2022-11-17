@@ -12,11 +12,6 @@ class City extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'country_id'
-    ];
-
     public function country()
     {
         return $this->belongsTo(Country::class);

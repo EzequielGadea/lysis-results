@@ -12,11 +12,6 @@ class Venue extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'city_id'
-    ];
-
     public function events()
     {
         return $this->hasMany(Event::class);

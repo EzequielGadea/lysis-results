@@ -13,11 +13,6 @@ class ByPoint extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'event_id',
-        'result_type_id'
-    ];
-
     public function event()
     {
         return $this->belongsTo(Event::class);

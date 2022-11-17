@@ -14,11 +14,6 @@ class TeamVisitor extends Model
 
     protected $table = 'team_visitor';
 
-    protected $fillable = [
-        'event_id',
-        'team_id'
-    ];
-
     public function event()
     {
         return $this->belongsTo(Event::class);

@@ -14,11 +14,6 @@ class Set extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'by_set_id',
-        'number',
-    ];
-
     public function result()
     {
         return $this->belongsTo(BySet::class, 'by_set_id', 'id');

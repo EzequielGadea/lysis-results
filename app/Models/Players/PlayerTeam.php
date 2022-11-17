@@ -16,14 +16,6 @@ class PlayerTeam extends Model
 
     protected $table = 'player_team';
 
-    protected $fillable = [
-        'player_id',
-        'team_id',
-        'contract_start',
-        'shirt_number',
-        'position_id'
-    ];
-
     public function player()
     {
         return $this->belongsTo(Player::class);

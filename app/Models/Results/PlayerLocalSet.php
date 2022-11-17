@@ -13,19 +13,6 @@ class PlayerLocalSet extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'player_local_set';
-    
-    protected $fillable = [
-        'set_id',
-        'event_id',
-        'points_in_favor',
-        'points_against',
-        'minute'
-    ];
-
-    protected $attributes = [
-        'points_in_favor' => 0,
-        'points_against' => 0
-    ];
 
     public function event()
     {

@@ -13,12 +13,6 @@ class BySet extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'event_id',
-        'set_amount',
-        'result_type_id'
-    ];
-
     public function event()
     {
         return $this->belongsTo(Event::class);

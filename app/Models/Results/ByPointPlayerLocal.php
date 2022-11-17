@@ -14,15 +14,7 @@ class ByPointPlayerLocal extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'by_point_player_local';
-
-    protected $fillable = [
-        'by_point_id',
-        'event_id',
-        'points_in_favor',
-        'points_against',
-        'minute',
-    ];
-
+    
     protected $attributes = [
         'points_in_favor' => 0,
         'points_against' => 0,

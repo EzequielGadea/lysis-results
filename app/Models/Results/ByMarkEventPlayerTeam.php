@@ -16,12 +16,6 @@ class ByMarkEventPlayerTeam extends Model
 
     protected $table = 'by_mark_event_player_team';
 
-    protected $fillable = [
-        'event_player_team_id',
-        'by_mark_id',
-        'mark_value',
-    ];
-
     public function eventPlayerTeam()
     {
         return $this->belongsTo(EventPlayerTeam::class);

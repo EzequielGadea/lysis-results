@@ -16,12 +16,6 @@ class ByMark extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'event_id',
-        'mark_name_id',
-        'result_type_id'
-    ];
-
     public function markName()
     {
         return $this->belongsTo(MarkName::class);

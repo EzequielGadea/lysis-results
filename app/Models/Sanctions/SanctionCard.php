@@ -10,7 +10,4 @@ class SanctionCard extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'color'
-    ];
 }
