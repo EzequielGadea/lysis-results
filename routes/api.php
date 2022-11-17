@@ -1,12 +1,13 @@
 <?php
 
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\HomeController;
 use App\Http\Resources\Players\PlayerTeamResource;
 use App\Models\Players\PlayerTeam;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Resources\Results\MarkNameResource;
-use App\Models\Results\MarkName;
+use App\Http\Resources\Events\EventResource;
+use App\Models\Events\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,6 @@ Route::controller(TeamController::class)->prefix('team')->group(function () {
     Route::get('{team}', 'show');
 });
 
-Route::get('/test', function() {
-    return MarkNameResource::collection(MarkName::all());
+Route::controller(HomeController::class)->prefix('event')->group(function () {
+    Route::get('index', 'index');
 });

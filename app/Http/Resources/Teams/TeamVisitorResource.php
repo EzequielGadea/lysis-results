@@ -4,7 +4,7 @@ namespace App\Http\Resources\Teams;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Events\EventResource;
-use App\Http\Resources\Team\TeamResource;
+use App\Http\Resources\Teams\TeamResource;
 
 class TeamVisitorResource extends JsonResource
 {
@@ -18,7 +18,7 @@ class TeamVisitorResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'event' => new EventResource($this->event),
+            'event' => new EventResource($this->whenLoaded('event')),
             'team' => new TeamResource($this->team),
         ];
     }
