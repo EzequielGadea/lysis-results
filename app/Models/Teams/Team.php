@@ -45,4 +45,9 @@ class Team extends Model
     {
         return $this->hasManyThrough(EventPlayerTeam::class, PlayerTeam::class);
     }
+
+    public function currentPlayersInTeam()
+    {
+        return $this->playerTeams->groupBy('playerId')->havingRaw('MAX(contract_starts)');
+    }
 }
