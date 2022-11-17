@@ -11,11 +11,6 @@ class Sport extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'picture'
-    ];
-
     public function leagues()
     {
         return $this->hasMany(League::class);

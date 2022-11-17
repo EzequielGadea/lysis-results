@@ -12,11 +12,6 @@ class Value extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'value',
-        'tag_id'
-    ];
-
     public function tag() {
         return $this->belongsTo(Tag::class);
     }

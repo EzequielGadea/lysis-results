@@ -22,12 +22,6 @@ class Event extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'start_date',
-        'venue_id',
-        'league_id'
-    ];
-
     public function venue()
     {
         return $this->belongsTo(Venue::class);

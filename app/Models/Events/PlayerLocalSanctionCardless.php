@@ -14,12 +14,6 @@ class PlayerLocalSanctionCardless extends Model
 
     protected $table = 'player_local_sanction_cardless';
 
-    protected $fillable = [
-        'event_id',
-        'sanction_cardless_id',
-        'minute'
-    ];
-
     public function playerLocal()
     {
         return $this->belongsTo(PlayerLocal::class);

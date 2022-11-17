@@ -22,11 +22,6 @@ class EventPlayerTeam extends Model
 
     protected $table = 'event_player_team';
 
-    protected $fillable = [
-        'player_team_id',
-        'event_id'
-    ];
-
     public function event(){
         return $this->belongsTo(Event::class);
     }

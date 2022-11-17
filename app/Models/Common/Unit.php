@@ -11,11 +11,6 @@ class Unit extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'unit'
-    ];
-
     public function marks()
     {
         return $this->hasMany(MarkName::class);

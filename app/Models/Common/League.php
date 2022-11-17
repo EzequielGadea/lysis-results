@@ -14,14 +14,6 @@ class League extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'logo_link',
-        'country_id',
-        'sport_id',
-        'picture'
-    ];
-
     public function sport()
     {
         return $this->belongsTo(Sport::class);

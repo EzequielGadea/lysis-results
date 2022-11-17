@@ -11,14 +11,6 @@ class Ad extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'image',
-        'views_hired',
-        'location',
-        'link',
-        'current_views'
-    ];
-
     public function values() {
         return $this->belongsToMany(Value::class)->withTimestamps();
     }

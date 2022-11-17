@@ -14,12 +14,6 @@ class PlayerVisitorSanctionCard extends Model
 
     protected $table = 'player_visitor_sanction_card';
 
-    protected $fillable = [
-        'event_id',
-        'sanction_card_id',
-        'minute'
-    ];
-
     public function playerVisitor()
     {
         return $this->belongsTo(PlayerVisitor::class);

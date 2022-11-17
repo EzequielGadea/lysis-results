@@ -11,11 +11,6 @@ class Criteria extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'sort_by'
-    ];
-
     public function markNames()
     {
         return $this->hasMany(MarkName::class);
