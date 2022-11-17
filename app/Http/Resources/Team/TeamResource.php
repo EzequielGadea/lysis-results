@@ -4,6 +4,7 @@ namespace App\Http\Resources\Team;
 
 use App\Http\Resources\Common\LeagueResource;
 use App\Http\Resources\Team\ManagerResource;
+use App\Http\Resources\Players\PlayerTeamResource;
 use App\Http\Resources\Whereabouts\CountryResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -24,6 +25,7 @@ class TeamResource extends JsonResource
             'country' => new CountryResource($this->country),
             'league' => new LeagueResource($this->league),
             'manager' => new ManagerResource($this->manager),
+            'players' => PlayerTeamResource::collection($this->currentPlayersInTeam()),
         ];
     }
 }
