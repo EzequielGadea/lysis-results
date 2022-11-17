@@ -16,13 +16,12 @@ class PlayerResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'name' => $this->name,
-            'surname' => $this->surname,
+            'name' => $this->name . ' ' . $this->surname,
             'birthDate' => $this->birth_date,
             'height' => $this->height,
             'weight' => $this->weight,
             'country' => new CountryResource($this->country),
-            'picture' => $this->picture
+            'picture' => $this->picture,
         ];
     }
 }
