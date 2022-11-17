@@ -16,16 +16,6 @@ class Player extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'surname',
-        'birth_date',
-        'height',
-        'weight',
-        'country_id',
-        'picture'
-    ];
-
     public function country()
     {
         return $this->belongsTo(Country::class);

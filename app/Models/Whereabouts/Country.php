@@ -16,11 +16,6 @@ class Country extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'picture'
-    ];
-
     public function players()
     {
         return $this->hasMany(Player::class);

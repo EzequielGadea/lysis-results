@@ -12,13 +12,6 @@ class Client extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'surname',
-        'birth_date',
-        'subscription_id',
-        'profile_picture'
-    ];
-
     public function user() 
     {
         return $this->hasOne(User::class);

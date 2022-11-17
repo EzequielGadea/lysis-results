@@ -16,15 +16,6 @@ class Team extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'logo_link',
-        'country_id',
-        'league_id',
-        'manager_id',
-        'picture'
-    ];
-
     public function country()
     {
         return $this->belongsTo(Country::class);

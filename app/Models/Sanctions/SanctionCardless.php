@@ -10,7 +10,4 @@ class SanctionCardless extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'description'
-    ];
 }

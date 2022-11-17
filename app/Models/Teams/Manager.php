@@ -12,14 +12,6 @@ class Manager extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'surname',
-        'birth_date',
-        'country_id',
-        'picture'
-    ];
-
     public function country()
     {
         return $this->belongsTo(Country::class);

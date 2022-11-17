@@ -16,12 +16,6 @@ class ByMarkPlayerLocal extends Model
 
     protected $table = 'by_mark_player_local';
 
-    protected $fillable = [
-        'by_mark_id',
-        'event_id',
-        'mark_value',
-    ];
-
     public function result()
     {
         return $this->belongsTo(ByMark::class, 'by_mark_id', 'id');

@@ -13,12 +13,6 @@ class MarkName extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'criteria_id',
-        'unit_id'
-    ];
-
     public function marks()
     {
         return $this->hasMany(ByMark::class);

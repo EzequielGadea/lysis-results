@@ -12,10 +12,6 @@ class Position extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'name'
-    ];
-
     public function players()
     {
         return $this->hasMany(PlayerTeam::class);

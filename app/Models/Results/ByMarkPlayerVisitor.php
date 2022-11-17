@@ -16,12 +16,6 @@ class ByMarkPlayerVisitor extends Model
 
     protected $table = 'by_mark_player_visitor';
 
-    protected $fillable = [
-        'by_mark_id',
-        'event_id',
-        'mark_value'
-    ];
-
     public function playerVisitor()
     {
         return $this->belongsTo(PlayerVisitor::class, 'event_id', 'event_id');
