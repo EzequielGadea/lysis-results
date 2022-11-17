@@ -3,6 +3,7 @@
 namespace App\Http\Resources\Players;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Whereabouts\CountryResource;
 
 class PlayerResource extends JsonResource
 {
