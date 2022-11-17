@@ -3,6 +3,8 @@
 namespace App\Http\Resources\Results;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Events\EventResource;
+use App\Http\Resources\Results\ResultTypeResource;
 
 class BySetResource extends JsonResource
 {
@@ -16,8 +18,8 @@ class BySetResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'eventId' => new EventResource($this->event),
-            'result' => new ResultTypeResource($this->event),
+            'event' => new EventResource($this->event),
+            'result' => new ResultTypeResource($this->type),
             'setAmount' => $this->set_amount,
         ];
     }
