@@ -19,8 +19,8 @@ class TeamLocalResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'event_id' => new EventResource($this->event),
-            'team_id' => new TeamResource($this->team),
+            'eventId' => new EventResource($this->event),
+            'teamId' => new TeamResource($this->team),
         ];
     }
 }

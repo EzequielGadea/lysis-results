@@ -17,7 +17,7 @@ class CriteriaResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'sort_by' => $this->sort_by,
+            'sortBy' => $this->sort_by,
         ];
     }
 }
