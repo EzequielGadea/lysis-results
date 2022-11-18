@@ -5,6 +5,9 @@ namespace App\Http\Resources\Players;
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Whereabouts\CountryResource;
 
+
+use App\Http\Resources\Teams\TeamResource;
+
 class PlayerResource extends JsonResource
 {
     /**

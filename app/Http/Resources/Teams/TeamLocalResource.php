@@ -4,7 +4,9 @@ namespace App\Http\Resources\Teams;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Events\EventResource;
+
 use App\Http\Resources\Teams\TeamResource;
+
 
 
 class TeamLocalResource extends JsonResource
@@ -19,7 +21,9 @@ class TeamLocalResource extends JsonResource
     {
         return [
             'id' => $this->id,
+
             'event' => new EventResource($this->whenLoaded('event')),
+
             'team' => new TeamResource($this->team),
         ];
     }
