@@ -4,7 +4,7 @@ namespace App\Http\Resources\Players;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Players\PlayeryResource;
-use App\Http\Resources\Teams\TeamResource;
+use App\Http\Resources\Team\TeamResource;
 use App\Http\Resources\Players\PositionResource;
 
 class PlayerTeamResource extends JsonResource
@@ -20,7 +20,7 @@ class PlayerTeamResource extends JsonResource
         return [
             'id' => $this->id,
             'player' => new PlayerResource($this->player),
-            'team' => new TeamResource($this->team),
+            'team' => new TeamResource($this->whenLoaded('team')),
             'contractStart' => $this->contract_start,
             'shirtNumber' => $this->shirt_number,
             'position' => new PositionResource($this->position)

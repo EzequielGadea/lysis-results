@@ -48,6 +48,6 @@ class Team extends Model
 
     public function currentPlayersInTeam()
     {
-        return $this->playerTeams->groupBy('playerId')->havingRaw('MAX(contract_starts)');
+        return $this->playerTeams->groupBy('player_id');
     }
 }
