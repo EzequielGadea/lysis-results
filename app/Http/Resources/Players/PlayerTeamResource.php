@@ -4,7 +4,7 @@ namespace App\Http\Resources\Players;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Players\PlayeryResource;
-use App\Http\Resources\Team\TeamResource;
+use App\Http\Resources\Teams\TeamResource;
 use App\Http\Resources\Players\PositionResource;
 
 class PlayerTeamResource extends JsonResource
