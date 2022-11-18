@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\Team\TeamResource;
+use App\Http\Resources\Teams\TeamResource;
 use App\Models\Teams\Team;
 use Illuminate\Http\Request;
 
