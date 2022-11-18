@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Resources\Players;
+namespace App\Http\Resources\Results;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Events\EventResource;
+use App\Http\Resources\Common\ResultTypeResource;
 
-class PositionResource extends JsonResource
+class BySetResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,7 +18,9 @@ class PositionResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'event' => new EventResource($this->event),
+            'result' => new ResultTypeResource($this->type),
+            'setAmount' => $this->set_amount,
         ];
     }
 }

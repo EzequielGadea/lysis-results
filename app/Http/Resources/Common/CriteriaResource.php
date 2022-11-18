@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\Players;
+namespace App\Http\Resources\Common;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PositionResource extends JsonResource
+class CriteriaResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,6 +17,7 @@ class PositionResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'sortBy' => $this->sort_by,
         ];
     }
 }

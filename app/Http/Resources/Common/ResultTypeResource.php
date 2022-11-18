@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\Players;
+namespace App\Http\Resources\Common;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PositionResource extends JsonResource
+class ResultTypeResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

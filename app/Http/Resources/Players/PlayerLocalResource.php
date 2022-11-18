@@ -3,11 +3,10 @@
 namespace App\Http\Resources\Players;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\Players\PlayeryResource;
-use App\Http\Resources\Teams\TeamResource;
-use App\Http\Resources\Players\PositionResource;
+use App\Http\Resources\Events\EventResource;
+use App\Http\Resources\Players\PlayerResource;
 
-class PlayerTeamResource extends JsonResource
+class PlayerLocalResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,11 +18,8 @@ class PlayerTeamResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'event' => new EventResource($this->event),
             'player' => new PlayerResource($this->player),
-            'team' => new TeamResource($this->whenLoaded('team')),
-            'contractStart' => $this->contract_start,
-            'shirtNumber' => $this->shirt_number,
-            'position' => new PositionResource($this->position)
         ];
     }
 }

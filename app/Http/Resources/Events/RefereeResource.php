@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Players;
+namespace App\Http\Resources\Events;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Whereabouts\CountryResource;
 
-class PositionResource extends JsonResource
+class RefereeResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,7 +17,10 @@ class PositionResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'name' => $this->name . ' ' . $this->surname,
+            'birthDate' => $this->birth_date,
+            'country' => new CountryResource($this->country),
+            'picture' => $this->picture,
         ];
     }
 }

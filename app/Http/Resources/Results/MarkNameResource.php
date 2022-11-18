@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Resources\Players;
+namespace App\Http\Resources\Results;
 
+use App\Http\Resources\Common\CriteriaResource;
+use App\Http\Resources\Common\UnitResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PositionResource extends JsonResource
+class MarkNameResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,8 +17,9 @@ class PositionResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
             'name' => $this->name,
+            'criteria' => new CriteriaResource($this->resource),
+            'unit' => new UnitResource($this->unit),
         ];
     }
 }

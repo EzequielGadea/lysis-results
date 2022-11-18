@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Players;
+namespace App\Http\Resources\Events;
 
+use App\Http\Resources\Common\LeagueResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PositionResource extends JsonResource
+class EventResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,7 +17,8 @@ class PositionResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'startDate' => $this->start_date,
+            'league' => new LeagueResource($this->league),
         ];
     }
 }

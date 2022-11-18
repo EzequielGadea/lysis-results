@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Resources\Players;
+namespace App\Http\Resources\Results;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Results\BySetResource;
 
-class PositionResource extends JsonResource
+
+class SetResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,7 +18,8 @@ class PositionResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'bySet' => new BySetResource($this->result),
+            'number' => $this->number,
         ];
     }
 }
