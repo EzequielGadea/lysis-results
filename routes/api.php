@@ -5,6 +5,8 @@ use App\Http\Resources\Players\PlayerTeamResource;
 use App\Models\Players\PlayerTeam;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Resources\Results\MarkNameResource;
+use App\Models\Results\MarkName;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +26,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::controller(TeamController::class)->prefix('team')->group(function () {
     Route::get('index', 'index');
     Route::get('{team}', 'show');
+});
+
+Route::get('/test', function() {
+    return MarkNameResource::collection(MarkName::all());
 });
