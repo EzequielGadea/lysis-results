@@ -22,9 +22,9 @@ class TeamResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'picture' => $this->picture,
-            'country' => new CountryResource($this->country),
-            'league' => new LeagueResource($this->league),
-            'manager' => new ManagerResource($this->manager),
+            'country' => new CountryResource($this->whenLoaded('country')),
+            'league' => new LeagueResource($this->whenLoaded('league')),
+            'manager' => new ManagerResource($this->whenLoaded('manager')),
             'players' => PlayerTeamResource::collection($this->whenLoaded('playerTeams')),
         ];
     }
