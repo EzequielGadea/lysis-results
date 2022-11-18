@@ -4,7 +4,7 @@ namespace App\Http\Resources\Results;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Events\EventResource;
-use App\Http\Resources\Results\ResultTypeResource;
+use App\Http\Resources\Common\ResultTypeResource;
 
 class BySetResource extends JsonResource
 {
