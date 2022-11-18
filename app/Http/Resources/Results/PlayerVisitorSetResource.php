@@ -4,7 +4,7 @@ namespace App\Http\Resources\Results;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Results\SetResource;
-use App\Http\Resources\Events\EventsResource;
+use App\Http\Resources\Events\EventResource;
 
 class PlayerVisitorSetResource extends JsonResource
 {

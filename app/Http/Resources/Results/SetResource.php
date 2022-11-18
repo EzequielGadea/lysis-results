@@ -18,7 +18,7 @@ class SetResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'bySet' => new BySetResource($this->sets),
+            'bySet' => new BySetResource($this->result),
             'number' => $this->number,
         ];
     }
