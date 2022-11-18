@@ -16,7 +16,7 @@ class EventPlayerTeamSanctionCardless extends Model
 
     public function sanction()
     {
-        return $this->belongsTo(SanctionCardless::class);
+        return $this->belongsTo(SanctionCardless::class, 'sanction_cardless_id');
     }
 
     public function eventPlayerTeam()

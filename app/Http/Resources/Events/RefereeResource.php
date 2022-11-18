@@ -3,7 +3,7 @@
 namespace App\Http\Resources\Events;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\Whereabout\CountryResource;
+use App\Http\Resources\Whereabouts\CountryResource;
 
 class RefereeResource extends JsonResource
 {
@@ -19,7 +19,7 @@ class RefereeResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name . ' ' . $this->surname,
             'birthDate' => $this->birth_date,
-            'country' => CountryResource::collection($this->country),
+            'country' => new CountryResource($this->country),
             'picture' => $this->picture,
         ];
     }

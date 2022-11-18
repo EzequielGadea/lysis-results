@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Resources\Team;
+namespace App\Http\Resources\Teams;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Events\EventResource;
 use App\Http\Resources\Team\TeamResource;
 
-
-class TeamLocalResource extends JsonResource
+class TeamVisitorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

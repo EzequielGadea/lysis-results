@@ -18,6 +18,7 @@ class PlayerTeamResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id' => $this->id,
             'player' => new PlayerResource($this->player),
             'team' => new TeamResource($this->whenLoaded('team')),
             'contractStart' => $this->contract_start,

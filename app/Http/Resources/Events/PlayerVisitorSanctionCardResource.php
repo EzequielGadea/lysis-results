@@ -5,6 +5,7 @@ namespace App\Http\Resources\Events;
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\Events\EventResource;
 use App\Http\Resources\Sanctions\SanctionCardResource;
+use App\Http\Resources\Players\PlayerResource;
 
 class PlayerVisitorSanctionCardResource extends JsonResource
 {
@@ -18,8 +19,9 @@ class PlayerVisitorSanctionCardResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'event' => new EventResource($this->event),
-            'sanctionCard' => new SanctionCardResource($this->sanction_card),
+            'player' => new PlayerResource($this->playerVisitor->player),
+            'event' => new EventResource($this->playerVisitor->event),
+            'sanctionCard' => new SanctionCardResource($this->sanction),
             'minute' => $this->minute,
         ];
     }

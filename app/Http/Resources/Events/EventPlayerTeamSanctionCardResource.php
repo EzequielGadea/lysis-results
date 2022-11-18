@@ -18,8 +18,8 @@ class EventPlayerTeamSanctionCardResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'sanctionCard' => new SanctionCardResource($this->sanction_card),
-            'event_player_team' => new EventPlayerTeamResoruce($this->event_player_team),
+            'sanctionCard' => new SanctionCardResource($this->sanction),
+            'eventPlayerTeam' => new EventPlayerTeamResource($this->eventPlayerTeam),
             'minute' => $this->minute,
         ];
     }
