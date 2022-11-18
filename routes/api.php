@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\TeamController;
+use App\Http\Resources\Players\PlayerTeamResource;
+use App\Models\Players\PlayerTeam;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Resources\Results\MarkNameResource;
+use App\Models\Results\MarkName;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::controller(TeamController::class)->prefix('team')->group(function () {
+    Route::get('index', 'index');
+    Route::get('{team}', 'show');
+});
+
+Route::get('/test', function() {
+    return MarkNameResource::collection(MarkName::all());
 });
