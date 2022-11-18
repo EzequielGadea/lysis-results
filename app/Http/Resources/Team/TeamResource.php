@@ -25,7 +25,7 @@ class TeamResource extends JsonResource
             'country' => new CountryResource($this->country),
             'league' => new LeagueResource($this->league),
             'manager' => new ManagerResource($this->manager),
-            'players' => PlayerTeamResource::collection($this->currentPlayersInTeam()),
+            'players' => PlayerTeamResource::collection($this->whenLoaded('playerTeams')),
         ];
     }
 }
