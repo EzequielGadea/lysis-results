@@ -3,7 +3,7 @@
 namespace App\Http\Resources\Results;
 
 use App\Http\Resources\Events\EventResource;
-use App\Http\Resources\Results\TypeResource;
+use App\Http\Resources\Common\ResultTypeResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ByPointResource extends JsonResource
