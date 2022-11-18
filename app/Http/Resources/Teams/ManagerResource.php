@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Team;
+namespace App\Http\Resources\Teams;
 
+use App\Http\Resources\Whereabouts\CountryResource;
 use Illuminate\Http\Resources\Json\JsonResource;
-use App\Http\Resources\Events\EventResource;
-use App\Http\Resources\Teams\TeamResource;
 
-class TeamVisitorResource extends JsonResource
+class ManagerResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -18,8 +17,10 @@ class TeamVisitorResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'event' => new EventResource($this->event),
-            'team' => new TeamResource($this->team),
+            'name' => $this->name . ' ' . $this->surname,
+            'birthdate' => $this->birth_date,
+            'picture' => $this->picture,
+            'country' => new CountryResource($this->country),
         ];
     }
 }
