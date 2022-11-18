@@ -4,7 +4,7 @@ namespace App\Http\Resources\Results;
 
 use App\Http\Resources\Events\EventResource;
 use App\Http\Resources\Results\MarkNameResource;
-use App\Http\Resources\Result\TypeResource;
+use App\Http\Resources\Results\TypeResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ByMarkResource extends JsonResource
