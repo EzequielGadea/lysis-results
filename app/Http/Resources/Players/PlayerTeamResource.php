@@ -19,7 +19,7 @@ class PlayerTeamResource extends JsonResource
     {
         return [
             'player' => new PlayerResource($this->player),
-            'team' => new TeamResource($this->team),
+            'team' => new TeamResource($this->whenLoaded('team')),
             'contractStart' => $this->contract_start,
             'shirtNumber' => $this->shirt_number,
             'position' => new PositionResource($this->position)
