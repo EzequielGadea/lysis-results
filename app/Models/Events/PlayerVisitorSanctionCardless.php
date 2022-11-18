@@ -16,11 +16,11 @@ class PlayerVisitorSanctionCardless extends Model
 
     public function sanction()
     {
-        return $this->belongsTo(SanctionCardless::class);
+        return $this->belongsTo(SanctionCardless::class, 'sanction_cardless_id');
     }
 
     public function playerVisitor()
     {
-        return $this->belongsTo(PlayerVisitor::class);
+        return $this->belongsTo(PlayerVisitor::class, 'event_id', 'event_id');
     }
 }
